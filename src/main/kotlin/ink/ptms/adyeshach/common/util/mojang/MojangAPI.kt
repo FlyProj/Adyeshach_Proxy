@@ -69,7 +69,7 @@ object MojangAPI {
 
     fun upload(file: File, model: Model, sender: CommandSender = Bukkit.getConsoleSender()): JsonObject? {
         try {
-            val url = URL("https://api.mineskin.org/generate/upload?&model=${model.namespace}")
+            val url = URL("https://mineskin.rgbmc.ml/generate/upload?&model=${model.namespace}")
             val boundary = java.lang.Long.toHexString(System.currentTimeMillis())
             val connection = url.openConnection() as HttpURLConnection
             connection.setRequestProperty("User-Agent", "Adyeshach")
